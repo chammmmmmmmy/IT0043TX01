@@ -1,0 +1,126 @@
+
+body{
+    margin: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial, sans-serif;
+    background-image:url('pokeballbg.jpg') ;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.picon{
+    flex: 0 0 25%;
+    height: calc(100/3);
+    box-sizing: border-box;
+    display: flex;
+    border: 1 px solid #ccc;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    position: relative;
+    
+}
+.picon-name{
+    flex: 1;
+}
+
+.picon img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+.picon1{
+    background-color: rgb(211, 211, 17) ;
+}
+
+.picon2{
+    background-color: rgb(163, 83, 30) ;
+}
+
+.picon3{
+    background-color: rgb(228, 228, 7) ;
+}
+
+.picon4{
+    background-color: rgb(17, 211, 104) ;
+}
+
+.picon5{
+    background-color: rgb(18, 230, 81) ;
+}
+
+.picon6{
+    background-color: rgb(17, 166, 211) ;
+}
+
+.picon7{
+    background-color: rgb(230, 74, 165) ;
+}
+
+.picon8{
+    background-color: rgb(218, 167, 133) ;
+}
+
+.picon9{
+    background-color: rgb(219, 233, 180) ;
+}
+
+.picon10{
+    background-color: rgb(243, 222, 197) ;
+}
+
+.picon11{
+    background-color: rgb(211, 133, 17) ;
+}
+
+.picon12{
+    background-color: rgb(255, 255, 5) ;
+}
+
+.picon span{
+    z-index: 1;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: center;
+}
+.container{
+    flex-direction: row;
+}
+
+.container::after{
+    content: '';
+    flex: auto;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .picon{
+        flex: 1 0 33.33%;
+        height: 25vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .picon{
+        flex: 1 0 100%;
+        height: auto;
+    }
+    
+    .picon:hover{
+        background-image: url(pokehover.jpg);
+    align-items: center;
+}
+}
