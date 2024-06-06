@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6efea;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 10px solid #000000;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #ece9b3;
+}
+
+.character img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+.text-content {
+    text-align: center;
+}
+
+.text-content h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.text-content h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 5px 0;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    text-align: justify;
+}
+
+/* Adding different background colors for each container */
+#character1 {
+    background-color: #f2d0a9;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+#character2 {
+    background-color: #a9d0f2;
+}
+
+#character3 {
+    background-color: #d0a9f2;
+}
+
+#character4 {
+    background-color: #f2a9d0;
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+#character5 {
+    background-color: #a9f2d0;
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+}
+
+#character6 {
+    background-color: #f2f0a9;
+}
+
+/* Responsive design for different breakpoints */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .character {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #character1,
+    #character4,
+    #character5 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    #character5 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .character {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+    .character img {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    .text-content {
+        text-align: left;
+    }
+}
+
+@media (max-width: 400px) {
+    .character {
+        flex-direction: row;
+      }
+    }
