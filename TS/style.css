@@ -295,5 +295,95 @@ footer {
     text-decoration: underline; /* Underline links on hover */
 }
 
+/* Breakpoint 1: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .left-lower-container {
+        flex: 1;
+    }
+
+    .right-container {
+        flex: 1;
+        order: 3; /* Place the right container below the lower-left container */
+        max-width: 100%;
+    }
+
+    .left-lower-container {
+        order: 2;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .service {
+        flex: 1 1 100%; /* Full width for each service */
+    }
+}
+
+/* Breakpoint 2: Similar to the first but with different layout adjustments */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .left-lower-container {
+        flex: 1;
+    }
+
+    .right-container {
+        flex: 1;
+        order: 3; /* Place the right container below the lower-left container */
+        max-width: 100%;
+    }
+
+    .left-lower-container {
+        order: 2;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .service {
+        flex: 1 1 100%; /* Full width for each service */
+    }
+}
+
+/* Breakpoint 3: Adjust layout for  screens */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .left-lower-container,
+    .right-container {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .right-container {
+        order: 3; /* Place the right container below the lower-left container */
+    }
+
+    .left-lower-container {
+        order: 2;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .service {
+        flex: 1 1 100%; /* Full width for each service */
+        margin: 10px 0; /* Add margin for spacing between service containers */
+    }
+}
 
 
