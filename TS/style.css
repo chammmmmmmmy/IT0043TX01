@@ -1,0 +1,299 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    background-image: url('bg1.png');
+    background-size: cover;
+}
+
+nav {
+    height: 50px;
+    background-color: rgb(67, 97, 80);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc(100vw - 1300px) / 2;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+    font-family: 'YourFontFamilyName', sans-serif; /* Add your font family here */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.left-container {
+    flex: 1;
+    max-width: 1000px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.welcome-message {
+    text-align: center;
+    background-color: transparent; /* Set background color to transparent */
+    padding: 20px;
+    border: none;
+    margin-bottom: 20px;
+    font-family: 'YourFontFamilyName', sans-serif; /* Use the same font family as the logo */
+    font-size: 1.3rem; /* Adjust the font size as needed */
+    color: #000;
+    border: 2px solid rgb(67, 97, 80);
+    box-shadow: 0 2px 4px rgb(67, 97, 80);
+    width: 965px;
+}
+
+.upper-left {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    width: 1000px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    background-color: #f7f7f7; /* Background color of the folder */
+    border: 2px solid #ccc; /* Border color of the folder */
+    border-radius: 5px; /* Border radius to round the corners */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative; /* Ensure the image is positioned relative to its container */
+}
+
+button {
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    background-color: rgb(77, 75, 75);
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+button:hover {
+    background-color:rgb(53, 25, 14);
+    color: rgb(255, 255, 255);
+
+}
+
+button.book-now {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure the button appears above the image */
+}
+
+.upper-left::before {
+    content: '';
+    position: absolute;
+    top: -20px; /* Adjust to move the top flap */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #f7f7f7; /* Match the folder background color */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.lower-left {
+    text-align: center;
+    width: 1000px;
+
+}
+
+.service-header {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 20px; /* Add padding to create space around the text */
+    border: 1px solid #ccc; /* Add border */
+    background-color: rgb(67, 97, 80); /* Add background color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    color: #ffffff; /* Change text color */
+    box-shadow: 50 100px 20px rgba(67, 97, 80, 0.767);  /* Add box shadow */
+
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: 2px solid rgb(67, 97, 80);
+    box-shadow: 0 2px 4px rgb(67, 97, 80);
+    padding: 20px;
+    margin: 10px;
+    margin: 20px 20px; /* Add margin to the sides */
+    height: 420px; /* Set a fixed height for the service container */
+}
+
+.service-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black; /* Set the text color to black */
+}
+
+.service-image {
+    width: 200px; /* Set the width of the image container to 100% */
+    height: 300px; /* Set a fixed height for the image container */
+    overflow: hidden; /* Hide overflowing content (cut off edges of the image) */
+    margin-bottom: 10px; /* Match the margin with the service container */
+}
+
+.service-image img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Avoid distortion by covering the entire container */
+}
+
+.service-description {
+    text-align: justify; /* Justify the text */
+    margin-top: 10px;
+    color: black; /* Set the text color to black */
+    height: 160px; 
+}
+
+
+.right-container {
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+}
+
+.social-media {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 30px; 
+
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* Update button styles if needed */
+
+.social-buttons button {
+    padding: 10px 20px;
+    border: none;
+    color: black; /* Change text color to black */
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-image 0.3s, background-color 0.3s; /* Add transitions for background image and color */
+    height: 50px; /* Adjust the height of the buttons */
+    background-color: rgb(250, 247, 234); /* Set default background color */
+    background-image: none; /* Set default background image */
+}
+
+.social-buttons button.facebook:hover {
+    background-color: transparent; /* Change background color to transparent on hover */
+    background-image: url('bg4.png'); /* Change background image on hover */
+    color: rgb(255, 255, 255); 
+}
+
+.social-buttons button.twitter:hover {
+    background-color: transparent;
+    background-image: url('bg5.png');
+    color: rgb(255, 255, 255); 
+}
+
+.social-buttons button.instagram:hover {
+    background-color: transparent;
+    background-image: url('bg6.png');
+    color: rgb(255, 255, 255); 
+}
+
+.social-buttons button.pinterest:hover {
+    background-color: transparent;
+    background-image: url('bg7.jpg');
+    color: rgb(255, 255, 255); 
+}
+
+footer {
+    background-color: rgb(67, 97, 80);/* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; /* Center-align the text */
+    padding: 20px 0; /* Padding for the footer */
+    margin-top: 40px; /* Space above the footer */
+}
+
+.footer-content {
+    max-width: 1200px; /* Maximum width for the footer content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 20px; /* Padding for the content */
+}
+
+.footer-content p {
+    margin: 0; /* Remove margin */
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+.social-links {
+    margin-top: 10px; /* Space above the social links */
+}
+
+.social-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 10px; /* Space between links */
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+
+
